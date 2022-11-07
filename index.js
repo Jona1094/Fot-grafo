@@ -33,6 +33,20 @@ btn.addEventListener ("click", mostrar);
 const sect1 = document.querySelector (".sect1");
 const fotosGaleria = document.querySelector (".galeria-grid");
 
+// HOVER NAV 
+
+let lgaleria = document.querySelector ('.lgaleria')
+let subNav = document.querySelector ('.ul-subNav')
+
+lgaleria.addEventListener ('click', () => {
+    subNav.classList.toggle ('active')
+    if (subNav.style.display == 'flex') {
+        subNav.style.display = 'none'
+    } else {
+        subNav.style.display = 'flex';
+    }
+})
+
 
 
 /* -------------------------------- */
