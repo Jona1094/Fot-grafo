@@ -41,7 +41,7 @@ let subNav = document.querySelector ('.ul-subNav')
 lgaleria.addEventListener ('click', () => {
     subNav.classList.toggle ('active')
     if (subNav.style.display == 'flex') {
-        subNav.style.display = 'none'
+        subNav.style.display = 'none';
     } else {
         subNav.style.display = 'flex';
     }

@@ -57,14 +57,14 @@
    height: 120px;
    justify-content: center;
    margin: auto;
+   display: none;
    position: absolute;
    top: 45%;
    left: 0;
-   display: none;
+   
    width: 100%;
    height: 115px;
    background-color: rgb(171, 42, 42);
-   animation: aparecerSubNav 1s forwards;
 }
 
 @keyframes aparecerSubNav {
@@ -75,6 +75,17 @@
     100% {
         top: 45%;
         opacity: 1;
+    }
+}
+
+@keyframes cerrarSubNav {
+    100% {
+        top: 45%;
+        opacity: 1;
+    }
+    0% {
+        top: 0;
+        opacity: 0;
     }
 }
 
@@ -258,40 +269,6 @@ li {
     object-fit: cover;
 }
 
-/* .puntero {
-    background-color: #FF0066;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-}
-
-.punterohh {
-    background-color: black;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    border-radius: 50%;
-    transform: rotate(45deg);
-    top: 10px;
-    left: 12px;
-    z-index: 49;
-    animation: girar 1s infinite linear;
-}
-
-@keyframes girare {
-    from {
-        transform: rotate(0deg);
-    }
-    to { 
-        transform: rotate(360deg);
-    }
-}
- */
-
-
  @keyframes abrir {
     0% {
         opacity: 0;
@@ -341,5 +318,199 @@ li {
         background-image: url(./imagenes/gif1.gif);
         background-size: cover;
     }
+}
+
+/* PAGINA TATTOO */
+
+.conteinerTattoo {
+    width: 100%;
+    height: 100vh;
+}
+
+.sectImg {
+  background-color: black;
+  margin: auto;
+  width: 90vw;
+  height: 100vh;
+}
+
+.imgTattoo {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+.imgTattoo:hover {
+    border-bottom: #f3eff0 solid 1px;
+    opacity: 0.8;
+}
+
+.sectImg2 {
+ background-color: black;
+  margin: auto;
+  width: 90vw;
+  height: 100vh;
+}
+
+.imgT2 {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+/* PAGINA NIÑOS */
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
 
 }
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* CONTACTO */
+
+.contacto {
+    display: flex;
+    flex-direction: row;
+    background-color: #f2f2f0;
+    padding: 1rem;
+  }
+  
+  .contacto__redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 2rem;
+  }
+  
+  .contacto__redes-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBFCFC;
+    width: 400px;
+    height: 350px;
+    padding: 2rem;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  }
+  
+  .contacto__redes-text {
+    padding: 5px;
+    font-family: 'Oswald', sans-serif;
+    color: #212121;
+  }
+  
+  #titulo {
+    font-size: 2rem;
+  }
+  
+  #subtitulo {
+    font-size: 1.3rem;
+   
+  }
+  
+  .iconoredes {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  .contacto__form {
+    margin-right: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  #datos {
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    width: 45%;
+    margin: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 2px;
+    border: white 1px solid;
+  }
+  
+  #textarea {
+    width: 92%;
+    height: 45%;
+    margin: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 5px;
+    border: white 1px solid;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  }
+  
+  #mensaje {
+    padding-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    color: #212121;
+    border-radius: 5px;
+    
+  }
+  
+  #enviar {
+    font-size: 1rem;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    color: #212121;
+    background-color: white;
+    border: 1px solid white;
+  }
+  
+  #enviar:hover {
+    background-color: #333366;
+    cursor: pointer;
+  }
