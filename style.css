@@ -23,6 +23,8 @@
     height: 75vh;
 }
 
+/* NAV */
+
 .navIzq {
     position: absolute;
     left: 0;
@@ -140,6 +142,24 @@ li {
     transform: scale(1.1);
     background-size: 100% 2px;
 }
+
+/* NAV PAGINAS */
+
+.ul {
+   display: flex;
+   flex-direction: row;
+   width: auto;
+   height: 100px;
+   justify-content: space-evenly;
+   align-items: center;
+   margin: auto;
+   background-color: #070505;
+   border-radius: 5px;
+}
+
+
+
+
 
 .presentacion-salida {
     display: none;
@@ -514,3 +534,50 @@ li {
     background-color: #333366;
     cursor: pointer;
   }
+
+  /* PAGINA BODAS */
+  .section {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 2rem;
+  }
+
+  .div1 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .div2 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    height: auto;
+  }
+
+  .div3 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .imgAcord {
+    max-width: 100%;
+    min-height: 700px;
+    max-height: 700px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform .2s;
+  }
+
+  .imgAcord:hover {
+    border-radius: 10px;
+    border: solid #070505 1px;
+  }
+
