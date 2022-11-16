@@ -63,11 +63,27 @@
    position: absolute;
    top: 45%;
    left: 0;
-   
    width: 100%;
    height: 115px;
    background-color: rgb(171, 42, 42);
 }
+
+/* paginas - subNav hover */
+
+.ul-subNavP {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    height: 120px;
+    justify-content: center;
+    margin: auto;
+    display: none;
+    position: absolute;
+    top: 11%;
+    left: 29%;
+    height: 115px;
+    background-color: rgb(171, 42, 42);
+ }
 
 @keyframes aparecerSubNav {
     0% {
@@ -153,7 +169,7 @@ li {
    justify-content: space-evenly;
    align-items: center;
    margin: auto;
-   background-color: #070505;
+   background-color: #090101;
    border-radius: 5px;
 }
 
@@ -378,47 +394,6 @@ li {
     margin: 10px;
 }
 
-/* PAGINA NIÑOS */
-
-.card {
-    position: relative;
-    width: 350px;
-    height: 350px;
-}
-
-.card .face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.card .front {
-    transform: perspective(600px) rotateY(0deg);
-}
-
-.card .front img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card .back {
-    transform: perspective(600px) rotateY(180deg);
-
-}
-
-.card:hover .front {
-    transform: perspective(600px) rotateY(180deg);
-}
-
-.card:hover .back {
-    transform: perspective(600px) rotateY(360deg);
-}
-
 /* CONTACTO */
 
 .contacto {
@@ -537,11 +512,12 @@ li {
 
   /* PAGINA BODAS */
   .section {
-    width: 85%;
+    width: 70%;
     display: flex;
     flex-direction: row;
     margin: auto;
     margin-top: 2rem;
+
   }
 
   .div1 {
@@ -574,6 +550,7 @@ li {
     margin: 5px;
     border-radius: 5px;
     transition: transform .2s;
+    animation: aparecerImg 3s;
   }
 
   .imgAcord:hover {
@@ -581,3 +558,100 @@ li {
     border: solid #070505 1px;
   }
 
+  @keyframes aparecerImg {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 2;
+    }
+  }
+
+/* Pagina niños */
+
+.textoN {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.bebeInicio {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-left: 20%;
+}
+
+.card {
+    margin: auto;
+    margin-top: 8%;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+    /* transform: scale(1.2); */
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.inicioNiños {
+    width: 100vw;
+    height: 60vh;
+}
+
+.galeriaNiños {
+    width: 100vw;
+    height: 100%;
+    background-color: #eaf7f7c5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgBebe {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin: 1rem;
+}

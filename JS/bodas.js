@@ -1,3 +1,18 @@
+// HOVER NAV 
+
+let lgaleria = document.querySelector ('.lgaleria')
+let subNav = document.querySelector ('.ul-subNavP')
+
+lgaleria.addEventListener ('click', () => {
+    subNav.classList.toggle ('active')
+    if (subNav.style.display == 'flex') {
+        subNav.style.display = 'none';
+    } else {
+        subNav.style.display = 'flex';
+    }
+})
+
+
 let section = document.querySelector ('.section')
 let div1 = document.createElement ('DIV')
 section.appendChild (div1)
